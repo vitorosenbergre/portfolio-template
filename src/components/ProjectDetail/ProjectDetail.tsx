@@ -31,7 +31,7 @@ const ProjectDetail: React.FC = () => {
                 <img 
                   key={index} 
                   src={url} 
-                  alt={`${project.title} - Image ${index + 1}`} 
+                  alt={`${project.title} - ${index + 1}`} 
                   className="img-fluid rounded mb-3" 
                   onClick={() => handleImageClick(url)} 
                 />
@@ -59,7 +59,7 @@ const ProjectDetail: React.FC = () => {
       {selectedImage && (
         <div className="modal-backdrop" onClick={handleCloseModal}>
           <div className="modal-content">
-            <img src={selectedImage} alt="Selected project image" className="modal-image" />
+            <img src={selectedImage} alt="Selected project" className="modal-image" />
           </div>
         </div>
       )}
