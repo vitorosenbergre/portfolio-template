@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <section id="home" className="d-flex vh-100 text-center">
       <div className="container m-auto">
-        <h1>Portfólio de Álvaro Argolo</h1>
+        <h1>Portfólio de Álvaro Argôlo</h1>
         <TypeAnimation
           sequence={[
             'Engenheiro Eletricista',
