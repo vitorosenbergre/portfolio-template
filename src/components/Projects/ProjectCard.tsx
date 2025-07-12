@@ -21,8 +21,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, image
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>
           </div>
-          <div className="card-footer">
-            <Link to={`/project/${id}`} className="btn btn-primary me-2">Ver Projeto</Link>
+          <div className="card-footer d-flex justify-content-center">
+            <Link to={`/project/${id}`} className="btn btn-primary">Ver Projeto</Link>
             {repoUrl !== '#' && (
               <a href={repoUrl} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ver Código</a>
             )}

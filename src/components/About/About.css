@@ -1,3 +1,13 @@
-.about-section .about-text {
+.about-section .about-text p {
   text-align: justify;
+  margin-bottom: 1.5rem; /* Aumenta a distância entre os parágrafos */
+}
+
+.about-image {
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

@@ -41,9 +41,9 @@ const Contact: React.FC = () => {
       <div className="container">
         <h2 className="section-title">Entre em Contato</h2>
         <div className="row justify-content-center">
-          <div className="col-md-5 mb-4 mb-md-0">
+          <div className="col-12 mb-4">
             <form onSubmit={handleSubmit}>
-              <div className="mb-3">
+              <div className="mb-3 form-field-wrapper">
                 <label htmlFor="name" className="form-label">Nome</label>
                 <input 
                   type="text" 
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-3 form-field-wrapper">
                 <label htmlFor="email" className="form-label">Email</label>
                 <input 
                   type="email" 
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                   required
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-3 form-field-wrapper">
                 <label htmlFor="message" className="form-label">Mensagem</label>
                 <textarea 
                   className="form-control" 
@@ -82,24 +82,21 @@ const Contact: React.FC = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
-                {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
-              </button>
+              <div className="form-field-wrapper">
+                <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
+                </button>
+              </div>
               {status === 'success' && <p className="text-success mt-2">Mensagem enviada com sucesso!</p>}
               {status === 'error' && <p className="text-danger mt-2">Erro ao enviar mensagem. Tente novamente.</p>}
             </form>
           </div>
-          <div className="col-md-5">
-            <div className="contact-info">
-              <h3>Informações de Contato</h3>
-              <p className="d-flex align-items-center"><i className="bi bi-envelope"></i> Email: vicorintias3@gmail.com</p>
-              <p className="d-flex align-items-center"><i className="bi bi-phone"></i> Telefone: +55 (XX) XXXX-XXXX</p>
-              <div className="social-links mt-3">
-                <a href="https://www.linkedin.com/in/alvaroargolo/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin"><i className="bi bi-linkedin"></i></a>
-                <a href="https://github.com/alvaroargolo" target="_blank" rel="noopener noreferrer" className="social-icon github"><i className="bi bi-github"></i></a>
-                <a href="https://wa.me/5571999999999" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp"><i className="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/alvaroargolo/" target="_blank" rel="noopener noreferrer" className="social-icon instagram"><i className="bi bi-instagram"></i></a>
-              </div>
+          <div className="col-12 mt-5">
+            <h4 className="text-center mb-4 section-title-social">Redes sociais</h4>
+            <div className="social-links mt-3">
+              <a href="https://wa.me/557588156455" target="_blank" rel="noopener noreferrer" className="social-icon whatsapp"><i className="bi bi-whatsapp"></i></a>
+              <a href="https://www.instagram.com/eng.alvaroargolo" target="_blank" rel="noopener noreferrer" className="social-icon instagram"><i className="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/alvaroargolo/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin"><i className="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>

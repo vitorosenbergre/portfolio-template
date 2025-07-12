@@ -44,7 +44,7 @@ const ProjectDetail: React.FC = () => {
                 <li key={index}>{tech}</li>
               ))}
             </ul>
-            <div className="mt-4">
+            <div className="mt-4 d-flex justify-content-center align-items-center">
               {project.projectUrl !== '#' && (
                 <a href={project.projectUrl} className="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
               )}

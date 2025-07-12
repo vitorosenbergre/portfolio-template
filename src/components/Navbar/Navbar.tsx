@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
+
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -26,9 +26,7 @@ const Navbar: React.FC = () => {
             <li className="nav-item">
               <ScrollLink className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}>Contato</ScrollLink>
             </li>
-            <li className="nav-item">
-              <ThemeToggle />
-            </li>
+            
           </ul>
         </div>
       </div>

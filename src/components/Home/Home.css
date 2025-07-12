@@ -1,39 +1,8 @@
-#home {
-  background: linear-gradient(135deg, var(--background-color) 0%, #e0e0e0 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  padding: 2rem 0;
-}
-
-#home h1 {
-  font-size: 4.5rem;
-  font-weight: 800;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px var(--shadow-color);
-}
-
-#home .lead {
-  font-size: 1.8rem;
-  color: var(--secondary-color);
-  font-weight: 600;
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  #home h1 {
-    font-size: 3rem;
-  }
-
-  #home .lead {
-    font-size: 1.2rem;
-  }
+.home-logo {
+  max-width: 400px;
+  margin-bottom: 40px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
