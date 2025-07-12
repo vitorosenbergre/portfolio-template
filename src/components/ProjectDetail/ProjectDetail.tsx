@@ -26,6 +26,7 @@ const ProjectDetail: React.FC = () => {
         <h2 className="section-title text-center mb-4">{project.title}</h2>
         <div className="row">
           <div className="col-md-8 mx-auto">
+            <p>{project.longDescription}</p>
             <div className="project-images-col mb-4">
               {project.imageUrls.map((url, index) => (
                 <img 
@@ -37,7 +38,6 @@ const ProjectDetail: React.FC = () => {
                 />
               ))}
             </div>
-            <p>{project.longDescription}</p>
             <h4 className="mt-4">Tecnologias Utilizadas:</h4>
             <ul>
               {project.technologies.map((tech, index) => (

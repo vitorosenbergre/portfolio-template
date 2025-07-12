@@ -6,13 +6,15 @@ import { projects } from '../../data/projects';
 
 const Projects: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('Todos');
+  const [showAllProjects, setShowAllProjects] = useState<boolean>(false);
 
   const allTechnologies = useMemo(() => {
     const techs = new Set<string>();
     projects.forEach(project => {
+      techs.add('Todos');
       project.technologies.forEach(tech => techs.add(tech));
     });
-    return ['Todos', ...Array.from(techs).sort()];
+    return Array.from(techs).sort();
   }, []);
 
   const filteredProjects = useMemo(() => {
@@ -23,6 +25,13 @@ const Projects: React.FC = () => {
       project.technologies.includes(selectedFilter)
     );
   }, [selectedFilter]);
+
+  const displayedProjects = useMemo(() => {
+    if (showAllProjects) {
+      return filteredProjects;
+    }
+    return filteredProjects.slice(0, 6);
+  }, [showAllProjects, filteredProjects]);
 
   return (
     <section id="projects" className="py-5 bg-light">
@@ -41,7 +50,7 @@ const Projects: React.FC = () => {
             ))}
           </div>
           <div className="row justify-content-center">
-            {filteredProjects.map((project, index) => (
+            {displayedProjects.map((project, index) => (
               <ProjectCard
                 key={index}
                 id={project.id}
@@ -53,6 +62,16 @@ const Projects: React.FC = () => {
               />
             ))}
           </div>
+          {filteredProjects.length > 6 && (
+            <div className="text-center mt-4 projects-button-wrapper">
+              <button
+                className="btn btn-primary"
+                onClick={() => setShowAllProjects(!showAllProjects)}
+              >
+                {showAllProjects ? 'Ver Menos' : 'Ver Todos Projetos'}
+              </button>
+            </div>
+          )}
         </Fade>
       </div>
     </section>

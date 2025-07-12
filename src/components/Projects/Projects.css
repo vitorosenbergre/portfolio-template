@@ -15,3 +15,8 @@
 .filter-buttons .btn-outline-primary.active {
   font-weight: bold;
 }
+
+.projects-button-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}

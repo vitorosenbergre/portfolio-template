@@ -65,7 +65,7 @@
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
   color: var(--primary-color);
   display: block;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 .form-field-wrapper {

@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
                   required
                 ></textarea>
               </div>
-              <div className="form-field-wrapper">
+              <div className="form-field-wrapper mt-4">
                 <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
                   {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
                 </button>
