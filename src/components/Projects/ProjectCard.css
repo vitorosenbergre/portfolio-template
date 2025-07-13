@@ -4,7 +4,7 @@
   overflow: hidden;
   box-shadow: 0 8px 20px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--tertiary-color);
+  background-color: #0C171F;
 }
 
 .project-card:hover {
@@ -20,12 +20,13 @@
 
 .project-card .card-body {
   padding: 20px;
+  background-color: #0C171F;
 }
 
 .project-card .card-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #af9461;
   margin-bottom: 10px;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .project-card .card-footer {
-  background-color: var(--tertiary-color);
+  background-color: #0C171F;
   border-top: none;
   padding: 15px 20px;
   display: flex;
@@ -55,16 +56,16 @@
 }
 
 .project-card .btn-primary {
-  background-color: var(--light-gray);
-  border-color: var(--light-gray);
+  background-color: #af9461;
+  border-color: #af9461;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  color: #FFFFFF;
+  color: #0C171F;
 }
 
 .project-card .btn-primary:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: #715933;
+  border-color: #715933;
+  color: #FFFFFF;
 }
 
 .project-card .btn-secondary {
