@@ -5,6 +5,19 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .scroll-to-top .btn-primary {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
 .scroll-to-top .btn-primary {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);

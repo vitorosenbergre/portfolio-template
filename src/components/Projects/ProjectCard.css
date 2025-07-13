@@ -41,6 +41,20 @@
   text-overflow: ellipsis;
 }
 
+@media (max-width: 768px) {
+  .project-card .card-img-top {
+    height: 180px;
+  }
+
+  .project-card .card-title {
+    font-size: 1.3rem;
+  }
+
+  .project-card .card-text {
+    font-size: 0.9rem;
+  }
+}
+
 .project-card .card-footer {
   background-color: #0C171F;
   border-top: none;

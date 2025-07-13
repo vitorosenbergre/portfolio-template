@@ -20,3 +20,10 @@
   max-width: 500px;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .filter-buttons .btn-outline-primary {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

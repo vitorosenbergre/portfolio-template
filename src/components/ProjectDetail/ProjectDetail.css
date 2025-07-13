@@ -39,6 +39,20 @@
   margin-bottom: 60px;
 }
 
+@media (max-width: 768px) {
+  .project-detail-section {
+    padding: 40px 0;
+  }
+
+  .project-images-col {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-section p {
+    font-size: 1rem;
+  }
+}
+
 .project-detail-section h4 {
   color: var(--primary-color);
   font-weight: 700;

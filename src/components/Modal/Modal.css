@@ -58,6 +58,30 @@
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .modal-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .modal-message {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .modal-close-button {
+    font-size: 1.5em;
+    top: 5px;
+    right: 5px;
+  }
+}
+
 .modal-close-button:hover {
   color: var(--primary-color);
   background-color: rgba(255, 255, 255, 0.2);

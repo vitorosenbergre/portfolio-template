@@ -12,6 +12,16 @@
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .social-links {
+    gap: 20px;
+  }
+
+  .social-links .social-icon {
+    font-size: 3rem;
+  }
+}
+
 .social-links .social-icon:hover {
   transform: translateY(-5px) scale(1.1);
 }
