@@ -94,12 +94,12 @@
   transform: translateY(-2px);
 }
 
-.modal-backdrop {
+.image-viewer-backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw !important;
+  height: 100vh !important;
   background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
@@ -108,23 +108,46 @@
   backdrop-filter: blur(5px);
 }
 
-.modal-content {
+.image-viewer-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  background: none;
+  width: 95vw !important;
+  height: 95vh !important;
+  background: none; /* Removendo qualquer background para não interferir */
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.modal-image {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
+.image-viewer-image {
+  max-width: 100% !important;
+  max-height: 100% !important;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  object-fit: contain; /* Ensures the entire image is visible within its bounds */
 }
 
-  
+.image-viewer-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1060;
+  transition: background-color 0.3s ease;
+}
+
+.image-viewer-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}

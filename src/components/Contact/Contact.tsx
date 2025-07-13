@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
+import Modal from '../Modal/Modal'; // Import the new Modal component
 
 const Contact: React.FC = () => {
   const [name, setName] = useState('');
@@ -12,15 +13,15 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setStatus('sending');
 
-    const serviceId = 'service_6qvwhsf'; // Substitua pelo seu Service ID do EmailJS
-    const templateId = 'template_u6fmerm'; // Substitua pelo seu Template ID do EmailJS
-    const publicKey = 'jkGRwQpLlY3hBc1Zr'; // Substitua pela sua Public Key do EmailJS
+    const serviceId = 'service_ba2r7o9'; // Substitua pelo seu Service ID do EmailJS
+    const templateId = 'template_1zczedb'; // Substitua pelo seu Template ID do EmailJS
+    const publicKey = '-L0k3UXLSBf_6gX14'; // Substitua pela sua Public Key do EmailJS
 
     const templateParams = {
       from_name: name,
       from_email: email,
       message: message,
-      to_email: 'vicorintias3@gmail.com' // O email do destinatário
+      to_email: 'alvaroargolo@gmail.com' // O email do destinatário
     };
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
@@ -30,9 +31,17 @@ const Contact: React.FC = () => {
         setName('');
         setEmail('');
         setMessage('');
+        // The timeout will now close the modal
+        setTimeout(() => {
+          setStatus('idle');
+        }, 2000); // Mensagem de sucesso desaparece após 2 segundos
       }, (err) => {
         console.log('FAILED...', err);
         setStatus('error');
+        // The timeout will now close the modal
+        setTimeout(() => {
+          setStatus('idle');
+        }, 2000); // Mensagem de erro desaparece após 2 segundos
       });
   };
 
@@ -83,12 +92,10 @@ const Contact: React.FC = () => {
                 ></textarea>
               </div>
               <div className="form-field-wrapper mt-4">
-                <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+                <button type="submit" className="btn btn-primary" disabled={status === 'sending' || !name || !email || !message}>
                   {status === 'sending' ? 'Enviando...' : 'Enviar Mensagem'}
                 </button>
               </div>
-              {status === 'success' && <p className="text-success mt-2">Mensagem enviada com sucesso!</p>}
-              {status === 'error' && <p className="text-danger mt-2">Erro ao enviar mensagem. Tente novamente.</p>}
             </form>
           </div>
           <div className="col-12 mt-5">
@@ -101,6 +108,20 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+      {status === 'success' && (
+        <Modal
+          message="Mensagem enviada com sucesso!"
+          type="success"
+          onClose={() => setStatus('idle')}
+        />
+      )}
+      {status === 'error' && (
+        <Modal
+          message="Erro ao enviar mensagem. Tente novamente."
+          type="error"
+          onClose={() => setStatus('idle')}
+        />
+      )}
     </section>
   );
 };

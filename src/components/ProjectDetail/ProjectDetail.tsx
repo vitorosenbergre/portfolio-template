@@ -57,9 +57,12 @@ const ProjectDetail: React.FC = () => {
       </div>
 
       {selectedImage && (
-        <div className="modal-backdrop" onClick={handleCloseModal}>
-          <div className="modal-content">
-            <img src={selectedImage} alt="Selected project" className="modal-image" />
+        <div className="image-viewer-backdrop" onClick={handleCloseModal}>
+          <div className="image-viewer-content">
+            <img src={selectedImage} alt="Selected project" className="image-viewer-image" />
+            <button className="image-viewer-close-button" onClick={handleCloseModal}>
+              &times;
+            </button>
           </div>
         </div>
       )}

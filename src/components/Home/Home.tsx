@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <section id="home" className="d-flex vh-100 text-center">
       <div className="container m-auto">
-        <img src={require('../../assets/images/logo/LOGO - Eng. Álvaro.JPG')} alt="Logo" className="home-logo" />
+        <img src={require('../../assets/images/logo/LOGO - Eng. Álvaro.png')} alt="Logo" className="home-logo" />
         <h1>Portfólio de Álvaro Argôlo</h1>
         <TypeAnimation
           sequence={[
