@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 
 import './Navbar.css';
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <a className="navbar-brand" onClick={handleClickBrand} style={{ cursor: 'pointer' }}>Engenheiro Álvaro Argôlo</a>
+        <button className="navbar-brand" onClick={handleClickBrand} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0, font: 'inherit', color: 'inherit' }}>Engenheiro Álvaro Argôlo</button>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
