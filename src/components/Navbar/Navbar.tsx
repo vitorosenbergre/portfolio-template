@@ -1,14 +1,37 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink, useNavigate, useLocation } from 'react-router-dom';
+import { Link as ScrollLink, scroller } from 'react-scroll';
 
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleClickBrand = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Give a small delay to allow navigation to complete before scrolling
+      setTimeout(() => {
+        scroller.scrollTo('home', {
+          smooth: true,
+          duration: 500,
+          offset: -70,
+        });
+      }, 100);
+    } else {
+      scroller.scrollTo('home', {
+        smooth: true,
+        duration: 500,
+        offset: -70,
+      });
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <RouterLink className="navbar-brand" to="/">Engenheiro Álvaro Argôlo</RouterLink>
+        <a className="navbar-brand" onClick={handleClickBrand} style={{ cursor: 'pointer' }}>Engenheiro Álvaro Argôlo</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
