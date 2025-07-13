@@ -76,6 +76,15 @@
   color: var(--primary-color);
   display: block;
   margin: 40px auto 0 auto;
+  opacity: 0.65;
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
+  opacity: 0.65;
 }
 
 .form-field-wrapper {
