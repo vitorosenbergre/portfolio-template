@@ -11,11 +11,13 @@ import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import ScrollHandler from './components/ScrollHandler/ScrollHandler';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollHandler />
       <div className="main-content-padding">
         <Navbar />
         <Routes>
