@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Link as ScrollLink, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 import './Navbar.css';
 
@@ -8,19 +8,19 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleClickBrand = () => {
+  const handleNavigation = (target: string) => {
     if (location.pathname !== '/') {
       navigate('/');
-      // Give a small delay to allow navigation to complete before scrolling
+      // Delay scrolling until after navigation
       setTimeout(() => {
-        scroller.scrollTo('home', {
+        scroller.scrollTo(target, {
           smooth: true,
           duration: 500,
           offset: -70,
         });
       }, 100);
     } else {
-      scroller.scrollTo('home', {
+      scroller.scrollTo(target, {
         smooth: true,
         duration: 500,
         offset: -70,
@@ -31,25 +31,24 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <button className="navbar-brand" onClick={handleClickBrand} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0, font: 'inherit', color: 'inherit' }}>Engenheiro Álvaro Argôlo</button>
+        <button className="navbar-brand" onClick={() => handleNavigation('home')} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0, font: 'inherit', color: 'inherit' }}>Engenheiro Álvaro Argôlo</button>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <ScrollLink className="nav-link" activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500}>Home</ScrollLink>
+              <a className="nav-link" onClick={() => handleNavigation('home')} style={{ cursor: 'pointer' }}>Home</a>
             </li>
             <li className="nav-item">
-              <ScrollLink className="nav-link" activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}>Sobre</ScrollLink>
+              <a className="nav-link" onClick={() => handleNavigation('about')} style={{ cursor: 'pointer' }}>Sobre</a>
             </li>
             <li className="nav-item">
-              <ScrollLink className="nav-link" activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={500}>Projetos</ScrollLink>
+              <a className="nav-link" onClick={() => handleNavigation('projects')} style={{ cursor: 'pointer' }}>Projetos</a>
             </li>
             <li className="nav-item">
-              <ScrollLink className="nav-link" activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}>Contato</ScrollLink>
+              <a className="nav-link" onClick={() => handleNavigation('contact')} style={{ cursor: 'pointer' }}>Contato</a>
             </li>
-            
           </ul>
         </div>
       </div>
