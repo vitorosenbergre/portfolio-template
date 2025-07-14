@@ -50,23 +50,23 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#" onClick={(e) => { e.preventDefault(); console.log('Clicked: Home (Brand)'); handleNavigation('home'); }} style={{ cursor: 'pointer' }}>Engenheiro Álvaro Argôlo</a>
+        <button className="navbar-brand" onClick={() => { console.log('Clicked: Home (Brand)'); handleNavigation('home'); }} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: '0', margin: '0', color: 'inherit', fontWeight: 'inherit' }}>Engenheiro Álvaro Argôlo</button>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"><i className="bi bi-list"></i></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav" ref={navbarRef}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); console.log('Clicked: Home'); handleNavigation('home'); }} style={{ cursor: 'pointer' }}>Home</a>
+              <button className="nav-link" onClick={() => { console.log('Clicked: Home'); handleNavigation('home'); }} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: '0', margin: '0', color: 'inherit', fontSize: 'inherit', fontWeight: 'inherit' }}>Home</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); console.log('Clicked: About'); handleNavigation('about'); }} style={{ cursor: 'pointer' }}>Sobre</a>
+              <button className="nav-link" onClick={() => { console.log('Clicked: About'); handleNavigation('about'); }} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: '0', margin: '0', color: 'inherit', fontSize: 'inherit', fontWeight: 'inherit' }}>Sobre</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); console.log('Clicked: Projects'); handleNavigation('projects'); }} style={{ cursor: 'pointer' }}>Projetos</a>
+              <button className="nav-link" onClick={() => { console.log('Clicked: Projects'); handleNavigation('projects'); }} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: '0', margin: '0', color: 'inherit', fontSize: 'inherit', fontWeight: 'inherit' }}>Projetos</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); console.log('Clicked: Contact'); handleNavigation('contact'); }} style={{ cursor: 'pointer' }}>Contato</a>
+              <button className="nav-link" onClick={() => { console.log('Clicked: Contact'); handleNavigation('contact'); }} style={{ cursor: 'pointer', background: 'none', border: 'none', padding: '0', margin: '0', color: 'inherit', fontSize: 'inherit', fontWeight: 'inherit' }}>Contato</button>
             </li>
           </ul>
         </div>
