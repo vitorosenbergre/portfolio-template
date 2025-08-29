@@ -12,7 +12,7 @@ const About: React.FC = () => {
             <div className="col-md-8">
               <div className="about-text">
                 <p>
-                  Olá, sou Engenheiro Eletricista com experiência em projetos elétricos, projetos de rede comum (tomada + iluminação), alimentação de PPCI, Sistemas de Proteção contra Descargas Atmosféricas (SPDA), eficiência energética, laudos técnicos, sistemas de CFTV e alarme. Também realizo a execução e documentação de projetos "As Built", garantindo a conformidade com as normas.
+                  Olá, sou Engenheiro Eletricista mestrando em sistemas de potência, com experiência em projetos elétricos, projetos de rede comum (tomada + iluminação), alimentação de PPCI, Sistemas de Proteção contra Descargas Atmosféricas (SPDA), eficiência energética, laudos técnicos, sistemas de CFTV e alarme. Também realizo a execução e documentação de projetos "As Built", garantindo a conformidade com as normas.
                 </p>
                 <br />
                 <p>
