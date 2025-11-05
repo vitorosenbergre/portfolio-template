@@ -15,6 +15,7 @@
     "@types/react-scroll": "^1.8.10",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
+    "http-server": "^14.1.1",
     "react": "^19.1.0",
     "react-awesome-reveal": "^4.3.1",
     "react-dom": "^19.1.0",
@@ -22,12 +23,11 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.3",
     "react-type-animation": "^3.2.0",
-    "serve": "^14.2.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "serve -s build -l tcp://0.0.0.0:3000",
+    "start": "http-server build -p 80 -a 0.0.0.0 --proxy http://0.0.0.0:80/?",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
