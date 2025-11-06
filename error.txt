@@ -1,9 +1,9 @@
 > portfolio-template@0.1.0 start
-> serve -s build -l ${PORT:-8080}
+> echo 'Hello World'
 
- INFO  Accepting connections at http://localhost:80
+Hello World
 npm error path /workspace
 npm error command failed
 npm error signal SIGTERM
-npm error command sh -c http-server build -p ${PORT:-8080} -a 0.0.0.0
-npm error A complete log of this run can be found in: /tmp/npm_cache/_logs/2025-11-06T01_37_17_985Z-debug-0.log
+npm error command sh -c serve -s build -l ${PORT:-8080}
+npm error A complete log of this run can be found in: /tmp/npm_cache/_logs/2025-11-06T02_05_33_205Z-debug-0.log
