@@ -1,4 +1,0 @@
-bash: line 1: serve: command not found
-bash: line 1: serve: command not found
-bash: line 1: serve: command not found
-bash: line 1: serve: command not found
