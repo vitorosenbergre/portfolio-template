@@ -1,9 +1,4 @@
-> portfolio-template@0.1.0 start
-> echo 'Hello World'
-
-Hello World
-npm error path /workspace
-npm error command failed
-npm error signal SIGTERM
-npm error command sh -c serve -s build -l ${PORT:-8080}
-npm error A complete log of this run can be found in: /tmp/npm_cache/_logs/2025-11-06T02_05_33_205Z-debug-0.log
+bash: line 1: serve: command not found
+bash: line 1: serve: command not found
+bash: line 1: serve: command not found
+bash: line 1: serve: command not found
