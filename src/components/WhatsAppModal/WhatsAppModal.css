@@ -10,7 +10,7 @@
   
   .whatsapp-modal-overlay {
     position: fixed;
-    bottom: 90px; /* Adjust this value to position it above the WhatsApp button */
+    bottom: 70px; /* Adjust this value to position it above the WhatsApp button */
     right: 20px;
     display: flex;
     align-items: flex-end; /* Align to the bottom */
@@ -46,19 +46,42 @@
     border-radius: 50%;
     margin-right: 15px;
   }
+
+  .profile-info {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
+.profile-info h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: clamp(0.8rem, 2.5vw, 1rem); /* Further adjusted fluid font size */
+}
+
 .profile-info p {
     margin: 0;
-    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.7rem;
   }
   
   .whatsapp-modal-close-button {
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Slightly smaller for better fit */
     cursor: pointer;
     margin-left: auto;
+    padding: 5px 10px; /* Add padding */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .whatsapp-modal-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
   }
   
   .whatsapp-modal-body {
@@ -122,7 +145,7 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .whatsapp-modal-overlay {
-      bottom: 80px; /* Adjust for smaller screens */
+      bottom: 60px; /* Adjust for smaller screens */
       right: 10px;
     }
   
@@ -134,7 +157,7 @@
   
   @media (max-width: 480px) {
     .whatsapp-modal-overlay {
-      bottom: 70px; /* Further adjust for very small screens */
+      bottom: 50px; /* Further adjust for very small screens */
       right: 5px;
     }
   
