@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Element } from 'react-scroll';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import ScrollHandler from './components/ScrollHandler/ScrollHandler';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/project/:id" element={<ProjectDetail />} />
         </Routes>
         <Footer />
+        <WhatsAppButton />
         <ScrollToTopButton />
       </div>
     </Router>
