@@ -10,7 +10,7 @@
   
   .whatsapp-modal-overlay {
     position: fixed;
-    bottom: 70px; /* Adjust this value to position it above the WhatsApp button */
+    bottom: 90px; /* Adjusted to clear the WhatsApp button */
     right: 20px;
     display: flex;
     align-items: flex-end; /* Align to the bottom */
@@ -145,7 +145,7 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .whatsapp-modal-overlay {
-      bottom: 60px; /* Adjust for smaller screens */
+      bottom: 80px; /* Adjust for smaller screens */
       right: 10px;
     }
   
@@ -157,7 +157,7 @@
   
   @media (max-width: 480px) {
     .whatsapp-modal-overlay {
-      bottom: 50px; /* Further adjust for very small screens */
+      bottom: 70px; /* Further adjust for very small screens */
       right: 5px;
     }
   

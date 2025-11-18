@@ -2,30 +2,20 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: transparent; /* Make background transparent */
-    border: 2px solid #25D366; /* Add a green border */
-    padding: 20px; /* Increase padding */
+    background-color: #25D366; /* Make background green */
+    border: 2px solid #25D366; /* Keep border green */
+    padding: 15px; /* Decrease padding */
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 30px; /* Increase icon size */
+    font-size: 24px; /* Decrease icon size */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Add transition */
   }
   
   .whatsapp-button i { /* Target the icon directly */
-    color: #25D366; /* Make the icon green */
-  }
-
-  .whatsapp-button:hover {
-    background-color: #25D366; /* Green background on hover */
-    border-color: #25D366; /* Keep border green on hover */
-  }
-
-  .whatsapp-button:hover i {
-    color: white; /* White icon on hover */
+    color: white; /* Make the icon white */
   }
   
