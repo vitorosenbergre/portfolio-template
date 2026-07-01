@@ -6,7 +6,6 @@ import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Element } from 'react-scroll';
@@ -42,7 +41,6 @@ function App() {
         </Routes>
         <Footer />
         <WhatsAppButton />
-        <ScrollToTopButton />
       </div>
     </Router>
   );
