@@ -4,7 +4,7 @@ import WhatsAppModal from '../WhatsAppModal/WhatsAppModal';
 
 const WhatsAppButton: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const whatsappNumber = "557588965492"; // Substitua pelo seu número de WhatsApp (ex: 5551999999999)
+  const whatsappNumber = "5575988156455";
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
