@@ -49,7 +49,7 @@ const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ onClose, whatsappNumber }
             ...prev,
             {
               id: 'auto-reply',
-              text: 'Fale comigo pelo Whatsapp!',
+              text: 'Fale comigo via Whatsapp.',
               sender: 'received',
               showButton: true
             }
@@ -93,7 +93,7 @@ const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ onClose, whatsappNumber }
       setIsTyping(false);
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'Fale comigo diretamente via whatsapp...',
+        text: 'Fale comigo via Whatsapp.',
         sender: 'received',
         showButton: true
       };

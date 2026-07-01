@@ -105,12 +105,16 @@
     background-color: white;
     align-self: flex-start;
     color: #303030;
+    border-top-left-radius: 0;
+    box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
   }
 
-  .chat-message.sent {
+  .chat-message.user {
     background-color: #dcf8c6;
     align-self: flex-end;
     color: #303030;
+    border-top-right-radius: 0;
+    box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
   }
 
   .chat-message p {
