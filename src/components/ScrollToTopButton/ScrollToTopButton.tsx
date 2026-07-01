@@ -26,7 +26,15 @@ const ScrollToTopButton: React.FC = () => {
     };
   }, []);
 
-  return null;
+  return (
+    <div className="scroll-to-top">
+      {isVisible && (
+        <button onClick={scrollToTop} className="btn btn-primary" aria-label="Voltar ao topo">
+          <i className="bi bi-arrow-up"></i>
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default ScrollToTopButton;
